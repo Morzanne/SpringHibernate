@@ -45,7 +45,7 @@ public class Outputter implements CommandLineRunner {
         memberDao.save(newAragorn);
         LOG.info(newAragorn + " has been saved !");
 
-        member tempUser = memberDao.findById(4L).get();
+        member tempUser = memberDao.findById(3L).get();
         LOG.info("****************");
         LOG.info("Forth member's name is "+ tempUser.getName());
         LOG.info("Forth member's power is "+ tempUser.getPower());
@@ -57,7 +57,7 @@ public class Outputter implements CommandLineRunner {
             LOG.info(myUser.toString());
         }
 
-        memberDao.deleteById(4L);
+        memberDao.deleteById(3L);
 
         newGandalf.setAge(2000);
         memberDao.save(newGandalf);
